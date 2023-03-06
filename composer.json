@@ -1,0 +1,33 @@
+{
+    "name": "alxgeras/php2",
+    "autoload": {
+        "psr-4": {
+            "alxgeras\\Php2\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "alxgeras\\Php2\\UnitTests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "akseonov",
+            "email": "k.aksenov@legacystudio.ru"
+        }
+    ],
+    "require": {
+        "ext-pdo": "*",
+        "symfony/polyfill-uuid": "^1.26",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "fakerphp/faker": "^1.20",
+        "roave/security-advisories": "dev-latest"
+    },
+    "scripts": {
+        "test": "phpunit tests --testdox --colors"
+    }
+
+}
