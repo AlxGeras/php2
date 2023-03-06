@@ -1,0 +1,84 @@
+GET http://localhost:80/
+Accept: application/json
+Cookie: XDEBUG_SESSION=start
+
+###
+
+GET http://localhost:80/users/id?uuid=6159f29f-9f6d-4b01-a022-cb0519a11ddd
+Accept: application/json
+Cookie: XDEBUG_SESSION=start
+
+###
+
+GET http://localhost:80/users/show?username=ivan
+Accept: application/json
+Cookie: XDEBUG_SESSION=start
+
+###
+
+GET http://localhost:80/posts/show?post_uuid=953a67cb-989a-48e8-92cc-37773b507d0a
+Accept: application/json
+Cookie: XDEBUG_SESSION=start
+
+###
+
+GET http://localhost:80/comments/show?uuid=ac9defbe-dc4a-46ca-8539-e9f496654ede
+Accept: application/json
+Cookie: XDEBUG_SESSION=start
+
+
+###
+
+POST http://localhost:80/posts/create
+Accept: application/json
+Cookie: XDEBUG_SESSION=start
+
+{
+"author_uuid": "104e8613-b7b2-4cb9-8296-56a765033ff8",
+"title": "Заголовок для удаления",
+"text": "Текст для удаления"
+}
+
+###
+
+POST http://localhost:80/comments/create
+Accept: application/json
+Cookie: XDEBUG_SESSION=start
+
+{
+"author_uuid": "104e8613-b7b2-4cb9-8296-56a765033ff8",
+"post_uuid": "30c462a1-48ac-4fd7-94fa-b4c02320442d",
+"text": "Мой новый коммент для эшена"
+}
+
+###
+
+POST http://localhost:80/postLikes/create
+Accept: application/json
+Cookie: XDEBUG_SESSION=start
+
+{
+"user_uuid": "104e8613-b7b2-4cb9-8296-56a765033ff8",
+"post_uuid": "30c462a1-48ac-4fd7-94fa-b4c02320442d"
+}
+
+###
+
+POST http://localhost:80/commentLikes/create
+Accept: application/json
+Cookie: XDEBUG_SESSION=start
+
+{
+"user_uuid": "104e8613-b7b2-4cb9-8296-56a765033ff8",
+"comment_uuid": "ac9defbe-dc4a-46ca-8539-e9f496654ede"
+}
+
+###
+
+DELETE http://localhost:80/posts?uuid=10418021-7cc6-4221-a1e8-29bfac1b4d20
+Accept: application/json
+Cookie: XDEBUG_SESSION=start
+
+{
+"uuid": "10418021-7cc6-4221-a1e8-29bfac1b4d20"
+}
