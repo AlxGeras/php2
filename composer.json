@@ -1,0 +1,37 @@
+{
+  "name": "alxgeras/php2",
+  "description": "collective blog",
+  "autoload": {
+    "psr-4": {
+      "alxgeras\\php2\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "alxgeras\\php2\\UnitTests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "alxgeras"
+    }
+  ],
+  "require": {
+    "symfony/polyfill-uuid": "^1.26",
+    "ext-pdo": "*",
+    "ext-mbstring": "*",
+    "psr/container": "^2.0",
+    "monolog/monolog": "^3.2",
+    "vlucas/phpdotenv": "^5.4",
+    "symfony/console": "^6.1",
+    "fakerphp/faker": "^1.20"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "phpunit/phpunit": "^9.5"
+  },
+  "scripts": {
+    "test": "phpunit tests --testdox --colors",
+    "test-rep": "php -dxdebug.mode=coverage vendor/bin/phpunit tests --coverage-html\ncoverage_report --coverage-filter src"
+  }
+}
